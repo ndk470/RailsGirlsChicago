@@ -1,0 +1,26 @@
+<h2> Bucket Lists </h2>
+<table border=1>
+<tr>
+<td>Name</td>
+<td>Reason</td>
+  <td>Edit</td>
+  <td>Destroy!!</td>
+</tr>
+
+<% @lists.each do |single_list| %>
+
+<tr>
+  <td>
+      <%=link_to single_list.name, list_path(single_list)%>
+  </td>
+
+<td> <%= single_list.reason %> </td>
+  <td>
+  <%= link_to "EDIT", edit_list_path(single_list) %>
+  </td>
+  <td> 
+    <%= link_to "Destroy",single_list, method: :delete, data: {confirm: 'Are you super-sure?' } %>
+  </td>
+  </tr>
+<% end %>
+</table>

@@ -1,0 +1,16 @@
+<h2> Create New Bucket List </h2>
+<%= form_for @list do |form| %>
+<div>
+<%= form.label :name %> <br />
+<%= form.text_field :name %>
+</div>
+
+<div>
+<%=form.label :reason %> <br />
+<%=form.text_field :reason %> <br />
+</div>
+
+<p><%=form.submit %> </p>
+<%end%>
+
+
